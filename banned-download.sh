@@ -7,6 +7,7 @@ do
     esac
 done
 
+music_folder="$(head -n 1 .config)"
 #cp rum-files.txt files.txt
 
 if [ -n $number ] && [  $number -gt 0 ] 2>/dev/null; then
@@ -25,5 +26,5 @@ else
   touch ban.txt
 fi
 
-mv *.mp3 /sdcard/Music/Longform/
+mv *.mp3 $music_folder
 
